@@ -47,8 +47,7 @@ class Database:
             is_banned=False,
             ban_duration=0,
             banned_on=datetime.date.max.isoformat(),
-            ban_reason="",
-        )
+            ban_reason="")
         await self.col.update_one({"id": id}, {"$set": {"ban_status": ban_status}})
 
     async def ban_user(self, user_id, ban_duration, ban_reason):
