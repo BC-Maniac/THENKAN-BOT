@@ -16,7 +16,7 @@
       "inline"
     ],
     "website": "https://github.com/DalinMathew/AutoFilterBotV3",
-    "repository": "https://github.com/BC-Maniac/AutoFilterBotV3",
+    "repository": "https://github.com/BC-Maniac/THENKAN-BOT",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
