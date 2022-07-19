@@ -35,10 +35,11 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
 default_start_msg = """
-**Hi, I'm Auto Filter V3**
+𝑯𝒆𝒚 {mention}👋
 
-Here you can search files in Inline mode as well as PM, Use the below buttons to search files or send me the name of file to search.
-"""
+𝑰 𝒂𝒎 "തങ്കൻ" 𝒚𝒐𝒖 𝒄𝒂𝒏 𝒄𝒂𝒍𝒍 𝒎𝒆 𝒂𝒔 𝑨𝒖𝒕𝒐𝒇𝒊𝒍𝒕𝒆𝒓𝒃𝒐𝒕 😌
+
+𝑬𝒙𝒄𝒍𝒖𝒔𝒊𝒗𝒆𝒍𝒚 𝒎𝒂𝒅𝒆 𝒇𝒐𝒓 𝒕𝒉𝒆 𝒕𝒆𝒂𝒎 𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁 . . .❕"""
 START_MSG = environ.get('START_MSG', default_start_msg)
 
 FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "")
