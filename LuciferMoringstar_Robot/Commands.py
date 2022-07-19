@@ -82,17 +82,10 @@ async def start(bot, message):
                         f_caption=f_caption
                 if f_caption is None:
                     f_caption = f"{files.file_name}"
-                buttons = [
-                    [
-                        InlineKeyboardButton('🎖 Join Now 🎖', url=f'{TUTORIAL}')
-                    ]
-                    ]
                 await bot.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=file_id,
                     caption=f_caption,
-                    reply_markup=InlineKeyboardMarkup(buttons)
-                    )
         except Exception as err:
             await message.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
     elif len(message.command) > 1 and message.command[1] == 'subscribe':
@@ -113,15 +106,6 @@ async def start(bot, message):
             START_MSG,
             parse_mode="Markdown",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [[
-                InlineKeyboardButton("Search Here", switch_inline_query_current_chat='')
-                ],[
-                InlineKeyboardButton("Help", callback_data="help"),
-                InlineKeyboardButton("About", callback_data="about")
-                ]]
-            )
-        )
         StopPropagation
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
@@ -328,10 +312,4 @@ async def delete(bot, message):
         await msg.edit('File not found in database')
 @Client.on_message(filters.command('about'))
 async def bot_info(bot, message):
-    buttons = [
-        [
-            
-            InlineKeyboardButton('Don't Click Here❕', url=f'{TUTORIAL}')
-        ]
-        ]
     await message.reply(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
